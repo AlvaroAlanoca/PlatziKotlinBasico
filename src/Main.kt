@@ -22,16 +22,12 @@ fun main(args: Array<String>)
         when (response){
             "1"-> {
                 println("Seleccionaste :$opcion1")
+                makeRecipe()
             }
 
             "2" -> {
-                println("Seleccionaste :$opcion2")
-                var recetas = listOf("Agua","Leche","Carne","Verduras","Frutas","Cereal","Huevos","Aceite")
+               viewRecipe()
 
-                for ((index,recetaindividual) in recetas.withIndex() )
-                {
-                    println("${index.plus(1)}.$recetaindividual")
-                }
             }
 
             "3"  -> {
@@ -46,4 +42,15 @@ fun main(args: Array<String>)
         }
 
     }while (!response.equals("3") )
+}
+fun makeRecipe (){
+    var recetas = listOf("Agua","Leche","Carne","Verduras","Frutas","Cereal","Huevos","Aceite")
+
+    for ((index,recetaindividual) in recetas.withIndex() )
+    {
+        println("${index.plus(1)}.$recetaindividual")
+    }
+}
+fun viewRecipe (){
+    println("Seleccionaste :$opcion2")
 }
